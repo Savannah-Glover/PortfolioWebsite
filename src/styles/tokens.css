@@ -1,0 +1,47 @@
+/* This is the 'design system'. Change the colors here to update the theme */
+
+:root {
+  /* ===== Navbar colors ===== */
+  --nav-bg: #002638;
+  --nav-text: #aac4c6;
+  --nav-text-active: #ffffff;
+
+  /* ===== Navbar sizing ===== */
+  --nav-height: 64px;
+  --nav-padding-x: 24px;
+
+  /* ===== Navbar decoration ===== */
+  --nav-border-color: rgba(255, 255, 255, 0.15);
+  --nav-active-underline-height: 2px;
+
+
+  /* ===== Page / App styling ===== */
+  --app-bg: #EFEFEF;              /* main background */
+  --page-max-width: 1100px;       /* content width */
+  --page-padding-x: 24px;         /* left/right padding */
+  --page-padding-y: 28px;         /* top/bottom padding */
+
+  --panel-bg: #ffffff;            /* card background */
+  --panel-radius: 18px;           /* rounded corners */
+  --panel-border: rgba(0, 0, 0, 0.08);
+  --panel-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+
+  --text: #111827;                /* dark readable text */
+  --muted: #4b5563;               /* secondary text */
+
+
+  /* ===== Chip base ===== */
+  --chip-text: #0f172a;
+  --chip-radius: 999px;
+
+  /* ===== Chip section accents ===== */
+  --chip-frontend-bg: #e0f2fe;
+  --chip-frontend-border: #7dd3fc;
+
+  --chip-backend-bg: #ecfeff;
+  --chip-backend-border: #67e8f9;
+
+  --chip-tools-bg: #f0fdf4;
+  --chip-tools-border: #86efac;
+}
+

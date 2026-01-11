@@ -1,0 +1,79 @@
+/* App background + default text */
+body {
+  background: var(--app-bg);
+  color: var(--text);
+}
+
+/* Keeps all pages aligned consistently */
+.page {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--page-padding-y) var(--page-padding-x);
+}
+
+/* The rounded “content container” */
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--panel-shadow);
+  padding: 22px;
+}
+
+/* Basic reusable typography helpers */
+.pageTitle {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.15;
+}
+
+.pageSubtitle {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Simple section spacing inside a panel */
+.section {
+  margin-top: 22px;
+}
+
+.sectionTitle {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+
+/* ===== Chips ===== */
+.chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: var(--chip-radius);
+  border: 1px solid transparent;
+  background: #eee;
+  color: var(--chip-text);
+}
+
+/* Section color variants */
+.chip--frontend {
+  background: var(--chip-frontend-bg);
+  border-color: var(--chip-frontend-border);
+}
+
+.chip--backend {
+  background: var(--chip-backend-bg);
+  border-color: var(--chip-backend-border);
+}
+
+.chip--tools {
+  background: var(--chip-tools-bg);
+  border-color: var(--chip-tools-border);
+}
+

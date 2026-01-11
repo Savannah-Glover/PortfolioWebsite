@@ -1,0 +1,50 @@
+/* The outer bar: full-width background */
+.nav {
+  width: 100%;
+  border-bottom: 1px solid var(--nav-border-color);
+  background-color: var(--nav-bg);
+}
+
+/* The inner content: centered and limited width */
+.nav__inner {
+  max-width: 90%;
+  margin: 0 auto;      /* centers the inner content */
+  padding: 16px;       /* space from edges */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand */
+.nav__brand {
+  color: var(--nav-text-active);
+  font-weight: 700;
+}
+
+/* Simple link styling */
+.nav__links {
+  display: flex;
+  gap: 12px;
+  color: var(--nav-text);
+  text-decoration: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--nav-text);
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  color: var(--nav-text-active)
+}
+
+.nav__link--active {
+  color: var(--nav-text-active);
+  font-weight: 700;
+  border-bottom: var(--nav-active-underline-height) solid var (--nav-text-active);
+  padding-bottom: 2px;
+}
+
+
+

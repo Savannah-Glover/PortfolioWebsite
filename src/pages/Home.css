@@ -1,0 +1,13 @@
+/* A simple 2-column layout that collapses on small screens */
+.grid2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* left panel wider */
+  gap: 18px;
+}
+
+/* Stack panels on smaller screens */
+@media (max-width: 800px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
