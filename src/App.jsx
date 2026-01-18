@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import WorkHistory from "./pages/WorkHistory";
 import LeetCode from "./pages/LeetCode";
+import Futoshiki from "./pages/Futoshiki";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/futoshiki"  element={<Futoshiki />} />
           <Route path="/work" element={<WorkHistory />} />
           <Route path="/leetcode" element={<LeetCode />} />
         </Routes>

@@ -1,6 +1,7 @@
 import "../styles/Home.css";
 
 import Chip from "../components/Chip";
+import Panel from "../components/Panel";
 
 const featuredProject = {
   title: "Futoshiki Solver",
@@ -8,7 +9,7 @@ const featuredProject = {
     "A puzzle solver that takes a grid with inequality constraints and finds valid solutions. Includes a step-by-step mode so you can see how the solver prunes the search space.",
   tech: [
     { label: "React", variant: "frontend" },
-    { label: "C#", variant: "backend" },
+    { label: "JavaScript", variant: "frontend" },
     { label: "Algorithms", variant: "backend" },
   ],
 };
@@ -19,7 +20,7 @@ export default function Home() {
     <div className="page">
       <div className="grid2">
         {/* Left: Intro/About */}
-        <div className="panel">
+        <Panel>
           <p className="pageSubtitle">Hi, my name is</p>
           <h1 className="pageTitle">My Name</h1>
           <p className="pageSubtitle">
@@ -32,12 +33,9 @@ export default function Home() {
               This site is a living portfolio: projects, writeups, and interactive demos.
             </p>
           </div>
-        </div>
-
+        </Panel>
         {/* Right: Tech Stack */}
-        <div className="panel">
-          <h2 className="sectionTitle">Tech Stack</h2>
-
+        <Panel title="Tech Stack">
           <div className="section">
             <h3>Frontend</h3>
             <div className="chipGroup">
@@ -64,41 +62,36 @@ export default function Home() {
               <Chip label="GitHub" variant="tools" />
             </div>
           </div>
-        </div>
+        </Panel>
       </div>
-      <div className="panel section">
-        <h2 className="sectionTitle">Featured Project</h2>
+      <div className="section">
+        <Panel title="Featured Project">
+          <h3 style={{ marginTop: 0}}>{featuredProject.title}</h3>
+          <p className="pageSubtitle">{featuredProject.description}</p>
 
-        <h3 style={{ marginTop: 0 }}>{featuredProject.title}</h3>
+          <div className="chipGroup">
+            {featuredProject.tech.map((item) => (
+              <Chip
+                key={item.label}
+                label={item.label}
+                variant={item.variant}
+              />
+            ))}
+          </div>
 
-        <p className="pageSubtitle">
-          {featuredProject.description}
-        </p>
-
-        <div className="chipGroup">
-          {featuredProject.tech.map((item) => (
-            <Chip
-              key={item.label}
-              label={item.label}
-              variant={item.variant}
-            />
-          ))}
-        </div>
-
-        <div
-          style={{
-            marginTop: "14px",
-            display: "flex",
-            gap: "12px",
-            flexWrap: "wrap",
-          }}
-        >
-          {/* <a className="btn" href="#/projects">View all projects</a>
-          <a className="btn btnPrimary" href="#/projects">Read more</a> */}
-        </div>
+          <div
+            style={{
+              marginTop: "14px",
+              display: "flex",
+              gap: "12px",
+              flexWrap: "wrap",
+            }}
+          >
+            <a className="btn" href="#/projects">View all projects</a>
+            <a className="btn btnPrimary" href="#/projects">Read more</a>
+          </div>
+        </Panel>
       </div>
-
-
     </div>
   );
 }

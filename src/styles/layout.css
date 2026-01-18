@@ -77,3 +77,76 @@ body {
   border-color: var(--chip-tools-border);
 }
 
+
+.panelHeader {
+  margin-bottom: 16px;
+}
+
+.panelSubtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+
+
+/* ===== Project cards ===== */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.projectCard {
+  grid-column: span 6;
+}
+
+@media (max-width: 900px) {
+  .projectCard {
+    grid-column: span 12;
+  }
+}
+
+.projectCard__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.projectCard__title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.projectCard__status {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.projectCard__desc {
+  margin: 10px 0 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.projectCard__footer {
+  margin-top: 14px;
+}
+
+.projectCard__link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #003249;
+}
+
+.projectCard__link:hover {
+  text-decoration: underline;
+}
+
