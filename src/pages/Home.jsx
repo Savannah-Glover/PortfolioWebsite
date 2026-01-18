@@ -1,4 +1,6 @@
-import "./Home.css"
+import "../styles/Home.css";
+
+import Chip from "../components/Chip";
 
 const featuredProject = {
   title: "Futoshiki Solver",
@@ -39,28 +41,27 @@ export default function Home() {
           <div className="section">
             <h3>Frontend</h3>
             <div className="chipGroup">
-              <span className="chip chip--frontend">React</span>
-              <span className="chip chip--frontend">JavaScript</span>
-              <span className="chip chip--frontend">HTML</span>
-              <span className="chip chip--frontend">CSS</span>
+              <Chip label="React" variant="frontend" />
+              <Chip label="JavaScript" variant="frontend" />
+              <Chip label="HTML" variant="frontend" />
+              <Chip label="CSS" variant="frontend" />
             </div>
           </div>
 
           <div className="section">
             <h3>Backend & Data</h3>
             <div className="chipGroup">
-              <span className="chip chip--backend">C#</span>
-              <span className="chip chip--backend">SQL Server</span>
-              <span className="chip chip--backend">SQLite</span>
+              <Chip label="C#" variant="backend" />
+              <Chip label="SQL Server" variant="backend" />
+              <Chip label="MS Access" variant="backend" />
             </div>
           </div>
 
           <div className="section">
             <h3>Automation & Tools</h3>
             <div className="chipGroup">
-              <span className="chip chip--tools">Excel / VBA</span>
-              <span className="chip chip--tools">Access</span>
-              <span className="chip chip--tools">GitHub</span>
+              <Chip label="VBA: Excel & Access" variant="tools" />
+              <Chip label="GitHub" variant="tools" />
             </div>
           </div>
         </div>
@@ -76,12 +77,11 @@ export default function Home() {
 
         <div className="chipGroup">
           {featuredProject.tech.map((item) => (
-            <span
+            <Chip
               key={item.label}
-              className={`chip chip--${item.variant}`}
-            >
-              {item.label}
-            </span>
+              label={item.label}
+              variant={item.variant}
+            />
           ))}
         </div>
 
